@@ -1,0 +1,27 @@
+# permissions for end users to view dravens.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: draven-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kubebuilder-test
+    app.kubernetes.io/part-of: kubebuilder-test
+    app.kubernetes.io/managed-by: kustomize
+  name: draven-viewer-role
+rules:
+- apiGroups:
+  - batch.my.domain
+  resources:
+  - dravens
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.my.domain
+  resources:
+  - dravens/status
+  verbs:
+  - get
