@@ -29,13 +29,14 @@ type DravenSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Draven. Edit draven_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Name string `json:"name,omitempty"`
 }
 
 // DravenStatus defines the observed state of Draven
 type DravenStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Happy string `json:"happy"`
 }
 
 //+kubebuilder:object:root=true
